@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Puffo‑Puff Landing</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Heroicons CDN -->
+  <script src="https://unpkg.com/heroicons@2.0.13/dist/heroicons.min.js"></script>
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <style>
+    /* Custom styles can go here */
+    body {font-family: 'Inter', sans-serif;}
+  </style>
+</head>
+<body class="bg-gray-50 flex flex-col items-center justify-center min-h-screen">
+  <header class="text-center mb-12">
+    <h1 class="text-5xl font-bold text-indigo-800">Puffo‑Puff</h1>
+    <p class="mt-4 text-lg text-gray-700">Il futuro del comfort è qui.</p>
+  </header>
+  <section class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl px-4">
+    <div class="flex flex-col items-center">
+      <img src="https://source.unsplash.com/featured/400x300?couch" alt="Product Image" class="rounded-lg shadow-lg" />
+      <h2 class="mt-4 text-2xl font-semibold text-indigo-700">Design Elegante</h2>
+      <p class="mt-2 text-center text-gray-600">Linee pulite, materiali premium.</p>
+    </div>
+    <div class="flex flex-col items-center">
+      <img src="https://source.unsplash.com/featured/400x300?relax" alt="Comfort Image" class="rounded-lg shadow-lg" />
+      <h2 class="mt-4 text-2xl font-semibold text-indigo-700">Massimo Comfort</h2>
+      <p class="mt-2 text-center text-gray-600">Seduta ergonomica per ore di relax.</p>
+    </div>
+  </section>
+  <footer class="mt-12 text-center text-gray-500">
+    © 2026 Puffo‑Puff. All rights reserved.
+  </footer>
+  <!-- GSAP Animations -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      gsap.from('header h1', {duration: 1, y: -50, opacity: 0, ease: 'bounce'});
+      gsap.from('section div', {duration: 1, y: 30, opacity: 0, stagger: 0.3});
+    });
+  </script>
+</body>
+</html>
